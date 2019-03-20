@@ -2,24 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Challenge 4</title>
+  <title>Challenge 3</title>
     <style>
 
-    .errormsg { 
+    .errorMsg{
+      color: red;
+      display:none;
+    }
+/*    #nameError { 
         /*font: Use a cool Google font*/
       color:red;
       display:none; } 
+    #addressError { 
+        /*font: Use a cool Google font*/
+      color:red;
+      display:none; } */
     </style>
     
     <script>
     function checkForm(){
-      // Write a function that displays the appropriate error message(s) if a field is left blank.  Make sure the form action is not performed if either field is blank.
+    let namevalue = document.querySelector('#name').value;
+    let nameError = document.querySelector('#nameError');
+    // let addressvalue = document.querySelector('#addr').value;
+    if(namevalue == '') {
+      
+      nameError.style.display = 'block';
+    }
+    // if(addressvalue == ''){
+    //   let addressError = document.querySelector('#addressError');
+    //   addressError.style.display = 'block';
+    // }
     }  
     </script>
 </head>
 <body>
     <h1>Challenge 3</h1>
-  <form action="challenge4.html" onsubmit="return checkForm();">
+  <form action="" onsubmit="return checkForm();">
         <fieldset>
         <legend>Personal details</legend>
           <label for="name">Full name: </label>
