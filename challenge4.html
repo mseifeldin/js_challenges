@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Challenge 54/title>
+    <title>Challenge 4</title>
     <style>
     body{
         margin: 2%;
@@ -37,8 +37,22 @@
     </style>
 
     <script>
-    // I used Two functions here.  Starter idea at: 
-    // https://codepen.io/ColleenEMc/pen/XmZzWw
+    function upDate(preview){
+        console.log("My function is being called!")
+        document.querySelector('#image').innerHTML =  preview.alt
+        document.querySelector("#image").style.backgroundImage = "url("+ preview.src+ ")"
+
+
+    }
+
+    function unDo(){
+        console.log("My function is being called!")
+        document.querySelector("#image").style.color = "white";
+        document.querySelector("#image").style.backgroundColor = "#8e68ff";
+        document.querySelector("#image").style.backgroundImage = "";
+        document.querySelector('#image').innerHTML = "Hover over or tab over/into an image below."; 
+    }
+
     </script>
 </head>
 
@@ -48,21 +62,59 @@
             Hover or tab over/into an image below.
         </div>
 
-        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
         <img class = "preview" 
-            alt = "Styling with a Bandana" 
-            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg">
+            tabindex = "0"
+            onmouseover = "upDate(this)"
+            onmouseleave="unDo()"
+            onfocus="upDate(this)"
+            onblur = "unDo()"
+            alt = "lilies" 
+            src = "https://images.homedepot-static.com/productImages/c1c763b1-417f-4071-8c6a-f0a1dac934a2/svn/van-zyverden-flower-bulbs-11352-64_1000.jpg">
 
-
-        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->  
         <img class = "preview" 
-            alt = "With My Boy" 
-            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG">
+            tabindex = "0"
+            onmouseover = "upDate(this)"
+            onmouseleave="unDo()"
+            onfocus="upDate(this)"
+            onblur = "unDo()"
+            alt = "tulips" 
+            src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVsGh-Xoxc4oqd9Z1tXRqjUkAV1-TOMLIhJKCOwinXKMCNdc2y">
     
-        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
         <img class = "preview" tabindex = "1" 
-            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg" 
-            alt = "Young Puppy">
+            tabindex = "0"
+            onmouseover = "upDate(this)"
+            onmouseleave="unDo()"
+            onfocus="upDate(this)"
+            onblur = "unDo()"
+            alt = "orchids"
+            src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBbQL5onfAzn_Jh1Yticqebo_Sq08Rrd2ppq-JH6WN1jWuZ0U1fg" >
+
+        <img class = "preview" tabindex = "1" 
+            tabindex = "0"
+            onmouseover = "upDate(this)"
+            onmouseleave="unDo()"
+            onfocus="upDate(this)"
+            onblur = "unDo()"
+            alt = "violets"
+            src = "https://i.pinimg.com/originals/1b/b2/6f/1bb26f1a8f50a2fa0578f1d3338a890e.jpg" >
+
+        <img class = "preview" tabindex = "1" 
+            tabindex = "0"
+            onmouseover = "upDate(this)"
+            onmouseleave="unDo()"
+            onfocus="upDate(this)"
+            onblur = "unDo()"
+            alt = "peonies"
+            src = "https://images.unsplash.com/photo-1525262878081-819667390b23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" >
+
+        <img class = "preview" tabindex = "1" 
+            tabindex = "0"
+            onmouseover = "upDate(this)"
+            onmouseleave="unDo()"
+            onfocus="upDate(this)"
+            onblur = "unDo()"
+            alt = "jasmine"
+            src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRALCIRYrEI-YhEy5U4WFdDV1SEnLk5VZa5Yk16wkvClrPBBxsF" >
 </body>
 </html>
     
