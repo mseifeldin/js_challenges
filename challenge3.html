@@ -2,42 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link href='https://fonts.googleapis.com/css?family=Coda' rel='stylesheet'>
   <title>Challenge 3</title>
     <style>
-
-    .errorMsg{
-      color: red;
-      display:none;
-    }
-/*    #nameError { 
+.errorMsg { 
         /*font: Use a cool Google font*/
+      font-family: Coda ;  
       color:red;
-      display:none; } 
-    #addressError { 
-        /*font: Use a cool Google font*/
-      color:red;
-      display:none; } */
+      display:none; 
+    } 
     </style>
     
     <script>
     function checkForm(){
-    let namevalue = document.querySelector('#name').value;
-    let nameError = document.querySelector('#nameError');
-    // let addressvalue = document.querySelector('#addr').value;
-    if(namevalue == '') {
+      var name = document.getElementById("name").value;
+      var address = document.getElementById("addr").value;
+      var errName = document.getElementById("nameError");
+      var errAddress = document.getElementById("addressError");
+      var form = document.querySelector("form");  
+      var is_valid = true
+
+
+    if (name.length == 0){
+       errName.style.display = "block";
+       is_valid = false;
+        console.log("situation 1")
+      }else {
+        errName.style.display = "";
+        console.log("situation 2")
+      }
+      if (address.length == 0){
+        errAddress.style.display = "block";
+        is_valid = false;
+        console.log("situation 3")
+      }else{
+        errAddress.style.display = "";
+        console.log("situation 4")
+      }
+      return is_valid;
       
-      nameError.style.display = 'block';
-    }
-    // if(addressvalue == ''){
-    //   let addressError = document.querySelector('#addressError');
-    //   addressError.style.display = 'block';
-    // }
     }  
     </script>
 </head>
 <body>
     <h1>Challenge 3</h1>
-  <form action="" onsubmit="return checkForm();">
+  <form action="challenge4.html" onsubmit="return checkForm();">
         <fieldset>
         <legend>Personal details</legend>
           <label for="name">Full name: </label>
